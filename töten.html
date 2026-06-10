@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Töten - Official Band Website</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        html { scroll-behavior: smooth; }
+
+        /* Fade-in animation */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 1s ease forwards;
+        }
+        @keyframes fadeIn {
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Glow button */
+        .glow-btn {
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.4);
+        }
+        .glow-btn:hover {
+            box-shadow: 0 0 25px rgba(255, 0, 0, 0.8);
+        }
+
+        /* Neon underline */
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: "";
+            position: absolute;
+            width: 0%;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background: #ef4444;
+            transition: width .3s;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body class="bg-black text-gray-100 font-sans">
+
+    <!-- Header -->
+    <header class="bg-gray-900/80 backdrop-blur-md p-4 shadow-lg sticky top-0 z-50">
+        <nav class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+
+            <!-- LOGO -->
+            <a href="#hero" class="mb-2 md:mb-0">
+                <img src="/Users/dylanstreet/Desktop/images/toten-logo.png" alt="Töten Logo" class="h-16 drop-shadow-xl">
+            </a>
+
+            <div class="space-x-6 mt-3 md:mt-0 text-lg">
+                <a href="#about" class="nav-link hover:text-red-500">About</a>
+                <a href="#music" class="nav-link hover:text-red-500">Music</a>
+                <a href="#origin" class="nav-link hover:text-red-500">Origin</a>
+                <a href="#contact" class="nav-link hover:text-red-500">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section id="hero" class="relative h-screen flex items-center justify-center bg-cover bg-center"
+        style="background-image: url('https://source.unsplash.com/random/1600x900/?dark,concert,band');">
+        <div class="absolute inset-0 bg-black/70"></div>
+
+        <div class="relative z-10 text-center fade-in">
+
+            <!-- HERO LOGO -->
+            <img src="/Users/dylanstreet/Desktop/images/toten-logo.png" alt="Töten Logo"
+                 class="mx-auto w-2/3 md:w-1/2 drop-shadow-2xl mb-6">
+
+            <p class="text-2xl md:text-3xl mt-4 text-gray-300">
+                Raw sound. Real message. No compromise.
+            </p>
+
+            <div class="mt-10 flex justify-center space-x-6">
+                <a href="#music"
+                   class="bg-red-600 glow-btn hover:bg-red-700 text-white font-bold py-3 px-10 rounded-full text-xl transition transform hover:scale-105">
+                    Feel Our Message
+                </a>
+
+                <a href="#contact"
+                   class="border border-red-500 hover:bg-red-600 hover:text-white py-3 px-10 rounded-full text-xl transition transform hover:scale-105">
+                    Book Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="py-24 bg-black fade-in">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-5xl font-bold text-red-500 mb-10">Who We Are</h2>
+
+            <p class="text-lg max-w-3xl mx-auto text-gray-300 leading-relaxed">
+                Töten is a collective born from the overlooked corners of Great Britain. We grew up with nothing but
+                music and the will to make something of ourselves. No frontman. No ego. Just unity, sound, and message.
+            </p>
+
+            <p class="text-lg max-w-3xl mx-auto text-gray-300 mt-6 leading-relaxed">
+                Our goal is simple: to show that ordinary people can create extraordinary things. Come to a show and
+                you’ll understand — you don’t just hear Töten. You feel it.
+            </p>
+        </div>
+    </section>
+
+    <!-- Music -->
+    <section id="music" class="py-24 bg-gray-900 fade-in">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-5xl font-bold text-red-500 mb-10">Upcoming Releases</h2>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+                <!-- Card -->
+                <div class="bg-black p-6 rounded-xl shadow-xl hover:shadow-red-600/40 transition transform hover:-translate-y-2">
+                    <h3 class="text-3xl font-semibold mb-3">A-Chord</h3>
+                    <p class="text-red-400 font-bold mb-2">20 June 2026</p>
+                    <p class="text-gray-300 mb-4">Six months of work. Multi-paced. Our magnum opus.</p>
+                    <button class="glow-btn bg-red-600 hover:bg-red-700 px-6 py-2 rounded-full font-bold">
+                        Pre-save (Soon)
+                    </button>
+                </div>
+
+                <!-- Card -->
+                <div class="bg-black p-6 rounded-xl shadow-xl hover:shadow-red-600/40 transition transform hover:-translate-y-2">
+                    <h3 class="text-3xl font-semibold mb-3">L</h3>
+                    <p class="text-red-400 font-bold mb-2">30 June 2026</p>
+                    <p class="text-gray-300 mb-4">Emotion, message, and a hook you won’t forget.</p>
+                    <button class="glow-btn bg-red-600 hover:bg-red-700 px-6 py-2 rounded-full font-bold">
+                        Spotify (Soon)
+                    </button>
+                </div>
+
+                <!-- Card -->
+                <div class="bg-black p-6 rounded-xl shadow-xl hover:shadow-red-600/40 transition transform hover:-translate-y-2">
+                    <h3 class="text-3xl font-semibold mb-3">Töten</h3>
+                    <p class="text-red-400 font-bold mb-2">November 2026</p>
+                    <p class="text-gray-300 mb-4">Our identity. Our sound. Our story.</p>
+                    <button class="glow-btn bg-red-600 hover:bg-red-700 px-6 py-2 rounded-full font-bold">
+                        YouTube (Soon)
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Origin -->
+    <section id="origin" class="py-24 bg-black fade-in">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-5xl font-bold text-red-500 mb-10">Our Roots</h2>
+
+            <p class="text-lg max-w-3xl mx-auto text-gray-300 leading-relaxed">
+                Forged in the underground scene of Great Britain, Töten is the product of struggle, unity, and raw
+                creativity. Our sound is a reflection of the world we grew up in — real, unfiltered, and unapologetic.
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-24 bg-gray-900 fade-in">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-5xl font-bold text-red-500 mb-10">Book Töten</h2>
+
+            <p class="text-lg max-w-3xl mx-auto text-gray-300 mb-8">
+                Want Töten at your venue, festival, or event? Reach out and let’s make it happen.
+            </p>
+
+           <a href="mailto:realtoten@gmail.com?subject=Booking%20Inquiry%20for%20Töten"
+   class="glow-btn bg-red-600 hover:bg-red-700 text-white font-bold py-4 px-12 rounded-full text-xl transition transform hover:scale-105">
+    Email Us
+</a>
+
+            <p class="text-sm text-gray-500 mt-4">realtoten@gmail.com</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black p-8 text-center text-gray-500">
+        <img src="/Users/dylanstreet/Desktop/images/toten-logo.png" alt="Töten Logo" class="h-12 mx-auto mb-4 opacity-80">
+        <p>&copy; 2026 Töten. All rights reserved.</p>
+
+        <div class="mt-4 space-x-6 text-lg">
+            <a href="#" class="hover:text-red-500">Facebook</a>
+            <a href="#" class="hover:text-red-500">Instagram</a>
+            <a href="#" class="hover:text-red-500">YouTube</a>
+        </div>
+    </footer>
+
+</body>
+</html>
